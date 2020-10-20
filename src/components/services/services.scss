@@ -1,0 +1,115 @@
+@import '../../styles/colors.scss';
+
+.services{
+    display: grid;
+    align-items: center;
+    padding-top: 150px;
+    // padding-bottom: 150px;
+    overflow: hidden;
+    // background-color: $bg;
+    & > .container{
+        display: grid;
+        row-gap: 50px;
+        border-radius: 40px;
+        padding: 50px;
+        grid-template-areas: 
+            'title'
+            'content-left'
+            'flags'
+            'content-right'
+            'contact-btn';
+        background: rgba(0, 0, 0, 0.04);
+        @media screen and (min-width: 768px) {
+            grid-template-areas: 
+                'title flags'
+                'content-left flags'
+                'content-left content-right'
+                'contact-btn content-right';
+            row-gap: 0;
+        }
+        @media screen and (min-width: 1024px) {
+            padding: 70px 105px;
+        }
+        @media screen and (min-width: 1440px) {
+            padding: 90px 125px;
+        }
+        column-gap: 100px;
+        & > .title{
+            grid-area: title;
+        }
+        & > .flags{
+            position: relative;
+            grid-area: flags;
+            svg{
+                width: 80%;
+                filter: drop-shadow(0 3px 80px rgba(0,0,0,0.1));
+                &:first-child{
+                    position: relative;
+                    margin-top: 50px;
+                    margin-left: -45px;
+                    z-index: 1;
+                    animation: 4s ease-in-out levitate infinite;
+                }
+                &:nth-child(2){
+                    position: absolute;
+                    right: -75px;
+                    z-index: 0;
+                    animation: 4s ease-in-out levitate infinite;
+                    animation-delay: 1s;
+                }
+            }
+            @keyframes levitate {
+                0% {transform: translate(0, 0)}
+                50% {transform: translate(0, 10px)}
+                100% {transform: translate(0, 0)}
+            }
+        }
+        & > .services-content-left{
+            grid-area: content-left;
+        }
+        & > .services-content-right{
+            grid-area: content-right;
+            @media screen and (min-width: 1024px){
+                padding-top: 80px;
+            }
+        }
+        & > .contact-link{
+            grid-area: contact-btn;
+            .contact-link-container{
+                display: grid;
+                justify-items: end;
+                row-gap: 30px;
+                span{
+                    position: relative;
+                    font-family: 'Montserrat', sans-serif;
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        top: 50%;
+                        left: -80px;
+                        height: 2px;
+                        width: 50px;
+                        transform: translateY(-50%);
+                        background: #fff;
+                    }
+                }
+            }
+        }
+        h1{
+            margin-bottom: 0px;
+            @media screen and (min-width: 768px) {
+                margin-bottom: 60px;
+            }
+        }
+        p{
+            margin: 30px 0;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        img{
+            max-width: 100%;
+        }
+    }
+}

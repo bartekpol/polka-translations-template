@@ -1,0 +1,69 @@
+@import '../../styles/colors.scss';
+
+.contact{
+    padding-bottom: 80px;
+    color: #000;
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 40px;
+        padding: 50px;
+        background: #fff;
+        border-radius: 40px;
+        @media screen and (min-width: 1024px) {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 100px;
+            padding: 70px 105px;
+        }
+        @media screen and (min-width: 1440px) {
+            padding: 90px 125px;
+        }
+    }
+    .contact-info{
+        padding-top: 30px;
+        .contact-info-item{
+            margin-bottom: 20px;
+            .label{
+                margin-bottom: 10px;
+                font-size: 0.7em;
+                text-transform: uppercase;
+            }
+            .content{
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1em;
+                color: $red;
+                word-break: break-all;
+            }
+            @media screen and (min-width: 768px) {
+                margin-bottom: 30px;
+                .content{
+                    font-size: 1.4em;
+                }
+            }
+        }
+
+    }
+    .contact-form{
+        @media screen and (min-width: 1024px) {
+            grid-column: 2 span;
+        }
+        h2{
+            margin-bottom: 40px;
+            color: $red;
+        }
+        form{
+            display: grid;
+            grid-template-columns: 1fr;
+            column-gap: 50px;
+            @media screen and (min-width: 768px) {
+                grid-template-columns: 1fr 1fr;
+                & > .textarea{
+                    grid-column: 2 span;
+                }
+                & > div:last-child{
+                    grid-column: 2/3;
+                }
+            }
+        }
+    }
+}

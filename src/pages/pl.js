@@ -1,10 +1,10 @@
 import React from "react";
 import Layout from "../components/layout";
 
-const IndexPage = () => {
+const plIndexPage = () => {
   return (
-      <Layout lang="dk"/>
+      <Layout lang="pl"/>
   )
 }
 
-export default IndexPage
+export default plIndexPage

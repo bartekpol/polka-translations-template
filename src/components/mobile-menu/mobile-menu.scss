@@ -1,0 +1,39 @@
+@import '../../styles/colors.scss';
+
+.mobile-menu{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: $red;
+    z-index: 99;
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.6em;
+        li{
+            padding-bottom: 10px;
+            &.lang-selector{
+                & > a {
+                    font-weight: lighter;
+                    color: rgba(255, 255, 255, 0.5);
+                    &[aria-current] {
+                        font-weight: bold;
+                        color: white;
+                     }
+                }
+            }
+        }
+    }
+    .close-button{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
