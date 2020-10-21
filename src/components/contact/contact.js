@@ -1,4 +1,5 @@
 import React from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from 'react-i18next';
 
 import Container from '../container/container';
@@ -26,12 +27,16 @@ const Contact = ({title, formtitle, phone, email}) => {
                     </div>
                     <div className="contact-form">
                         <h2>{formtitle}</h2>
-                        <form>
+                        <form action="https://submit-form.com/OVcckMA7">
                             <Input type="text" label={t('Imię')} id="name"/>
                             <Input type="email" label={t('Email')} id="email"/>
                             <TextArea label={t('Wiadomość')} id="message" />
                             <div className="form-control">
                                 <button type="submit" className="btn black" style={{float: 'right'}}>{`${t('Wyślij wiadomość.')}`}</button>
+                                <ReCAPTCHA
+                                    sitekey="6LdB29kZAAAAAFIR-P0Hmh3fr7w1UKj4iImG0mby"
+                                    style={{float: 'right'}}
+                                />
                             </div>
                         </form>
                     </div>
