@@ -18,7 +18,7 @@ class TextArea extends React.Component {
         this.setState({focused: false});
     }
     render() {
-        let {id, label, styles} = this.props;
+        let {id, label, styles, ref} = this.props;
         let className = 'form-control textarea';
         if(this.state.value.length > 0)
             className += ' filled';
@@ -28,7 +28,7 @@ class TextArea extends React.Component {
         return (
             <div className={className} ref={this.elRef} style={styles}>
                 <label htmlFor={id}>{label}</label>
-                <textarea name={id} id={id} value={this.state.value} onChange={this.handleChange} onFocus={this.handleFocus} onBlur={this.handleBlur}/>
+                <textarea name="message" id={id} value={this.state.value} onChange={this.handleChange} onFocus={this.handleFocus} onBlur={this.handleBlur} ref={ref}/>
             </div>
         )
     }

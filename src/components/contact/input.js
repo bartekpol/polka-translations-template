@@ -18,7 +18,7 @@ class Input extends React.Component {
         this.setState({focused: false});
     }
     render() {
-        let {type, id, label, styles} = this.props;
+        let {type, id, label, styles, ref} = this.props;
         let className = 'form-control input';
         if(this.state.value.length > 0)
             className += ' filled';
@@ -28,7 +28,7 @@ class Input extends React.Component {
         return (
             <div className={className} ref={this.elRef} style={styles}>
                 <label htmlFor={id}>{label}</label>
-                <input type={type} name={id} id={id} value={this.state.value} onChange={this.handleChange} onFocus={this.handleFocus} onBlur={this.handleBlur}/>
+                <input type={type} name={id} id={id} value={this.state.value} onChange={this.handleChange} onFocus={this.handleFocus} onBlur={this.handleBlur} ref={ref}/>
             </div>
         )
     }
