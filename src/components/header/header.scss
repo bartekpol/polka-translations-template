@@ -23,7 +23,7 @@
             width: 80px;
             transition: all .3s ease;
             @media screen and (min-width: 1024px) {
-                width: 148px;
+                width: 100px;
             }
         }
     }
@@ -86,11 +86,11 @@
     &.fixed{
         position: fixed;
         background: $red;
-        & > .logo{
-            & > img{
-                width: 90px;
-            }
-        }
+        // & > .logo{
+        //     & > img{
+        //         width: 90px;
+        //     }
+        // }
     }
 }
 body.open{

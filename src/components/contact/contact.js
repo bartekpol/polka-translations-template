@@ -90,7 +90,6 @@ const Contact = ({title, formtitle, phone, email}) => {
                                 <div>
                                     {formStatus === 'success' && <div style={{color: 'green'}}>{`Wiadomość została pomyślnie wysłana.`}</div>}
                                     {formStatus === 'error' && <div style={{color: 'red'}}>{`Wystąpił problem podczas wysyłania wiadomości.`}</div>}
-                                    {console.log(formStatus)}
                                 </div>
                             </div>
                         </form>
