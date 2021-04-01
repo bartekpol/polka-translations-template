@@ -35,7 +35,8 @@ const Header = ({onToggleMenu}) => {
             </div>
             <div className="logo">
                 {/* <img src={Logo} alt="Polka Translations"/> */}
-                Polka Translations
+                <span className="first-line">Polka</span>
+                <span className="second-line">Translations</span>
             </div>
             <div className="right-menu">
                 <Menu>

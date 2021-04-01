@@ -10,7 +10,7 @@ const IndexPage = () => {
         <meta property="og:title" content="Polka Translations" />
         <meta property="og:description" content="Oversættelse og tolkning mellem polsk og dansk" />
         <meta property="og:url" content="https://polkatranslations.dk/" />
-        <meta property="og:image" content="https://res.cloudinary.com/bpweb/image/upload/v1617228731/ogimagedk_tu3vdi.png" />
+        <meta property="og:image" content="https://res.cloudinary.com/bpweb/image/upload/v1617270371/ogimagedk_xdng0z.png" />
       </Helmet>
       <Layout lang="dk"/>
     </>
