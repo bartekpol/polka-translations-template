@@ -1,4 +1,3 @@
+Website designed and created for Translation Office. Based on Gatsby and Strapi Headless CMS.
 
-<h1 align="center">
-  Polka Translations Site
-</h1>
+Live: https://www.polkatranslations.dk
