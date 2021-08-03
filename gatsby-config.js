@@ -33,7 +33,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://polka-translations.herokuapp.com/`,
+        apiURL: `https://polka-translations.herokuapp.com`,
         queryLimit: 1000, // Default to 100
         //If using single types place them in this array.
         singleTypes: [`mainpage`],
