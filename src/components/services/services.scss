@@ -40,9 +40,10 @@
         & > .flags{
             position: relative;
             grid-area: flags;
+            transform: translateX(16%);
             svg{
                 max-width: 327px;
-                width: 80%;
+                width: 45%;
                 filter: drop-shadow(0 3px 80px rgba(0,0,0,0.1));
                 &:first-child{
                     position: relative;
@@ -50,9 +51,7 @@
                     z-index: 1;
                 }
                 &:nth-child(2){
-                    position: absolute;
-                    top: 80px;
-                    right: -20px;
+                    transform: translate(-33%, 13%);
                     z-index: 0;
                 }
             }
